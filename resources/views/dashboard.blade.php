@@ -2,7 +2,7 @@
 
 
 @section('page_header')
-    Home
+    主页
 @endsection
 
 
@@ -16,13 +16,13 @@
                 <div class="small-box bg-yellow">
                     <div class="inner">
                         <h3>{{$clinic->patients()->count()}}</h3>
-                        <p>Patients Registered</p>
+                        <p>已注册患者数</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
                     <a href="{{route('patients')}}" class="small-box-footer">
-                        More info <i class="fa fa-arrow-circle-right"></i>
+                        更多信息 <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -35,13 +35,13 @@
                         <h3>
                             {{$prescriptionCount}}
                         </h3>
-                        <p>Prescriptions Issued</p>
+                        <p>处方数量</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-clipboard"></i>
                     </div>
                     <a href="{{route('issueMedicine')}}" class="small-box-footer">
-                        More info <i class="fa fa-arrow-circle-right"></i>
+                        更多信息 <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -52,13 +52,13 @@
                 <div class="small-box bg-aqua">
                     <div class="inner">
                         <h3>$ {{$payments}}</h3>
-                        <p>Total Payments</p>
+                        <p>总付款</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
                     <a href="{{route('payments')}}" class="small-box-footer">
-                        More info <i class="fa fa-arrow-circle-right"></i>
+                        更多信息 <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -69,13 +69,13 @@
                 <div class="small-box bg-red">
                     <div class="inner">
                         <h3>{{$clinic->drugs()->where('quantity','<',100)->count()}}</h3>
-                        <p>Stocks Running Low</p>
+                        <p>库存不足</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-shopping-cart"></i>
                     </div>
                     <a href="{{route('stocksRunningLow')}}" class="small-box-footer">
-                        More info <i class="fa fa-arrow-circle-right"></i>
+                        更多信息 <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -85,16 +85,15 @@
     <div class="row container-fluid">
         <div class="box box-primary">
             <div class="box-header">
-                <h4 class="box-title">Patient Visits - Last 6 months</h4>
+                <h4 class="box-title">就诊病人数量 - 最近6个月</h4>
             </div>
             <div class="box-body">
                 @if(count($stats['visits']['m'])<2)
                     {{-- When no stats available to be shown --}}
                     <div class="callout callout-info">
-                        <h4>Not Enough Records Found!</h4>
+                        <h4>没有记录!</h4>
                         <p>
-                            There are no enough records to show statistic of the clinic. This will be available once
-                            you start inserting prescriptions.
+                            没有足够的记录显示。
                         </p>
                     </div>
                 @else

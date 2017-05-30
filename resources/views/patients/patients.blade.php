@@ -2,7 +2,7 @@
 
 
 @section('page_header')
-    Patients
+    病人记录
 @endsection
 
 
@@ -14,7 +14,7 @@
             <button class="btn btn-primary pull-left" data-toggle="modal" data-target="#addPatientModal">
                 <span data-toggle="tooltip"
                       data-placement="bottom" title="" style="margin-left: 10px"
-                      data-original-title="Fill the basic information of a patient and add to the system.">Add Patient</span>
+                      data-original-title="填充一个病人的基本信息并添加到系统">添加病人</span>
             </button>
         </div>
 
@@ -25,7 +25,7 @@
             @if(session()->has('success'))
                 <div class="alert alert-success alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-check"></i> Success!</h4>
+                    <h4><i class="icon fa fa-check"></i> 成功!</h4>
                     <p>
                         {{session('success')}}
                     </p>
@@ -36,7 +36,7 @@
             @if(session()->has('error'))
                 <div class="alert alert-danger alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-ban"></i> Success!</h4>
+                    <h4><i class="icon fa fa-ban"></i> 成功!</h4>
                     {{session('error')}}
                 </div>
             @endif
@@ -54,10 +54,10 @@
             <table class="table table-condensed table-hover text-center" id="patientsTable">
                 <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Contact No.</th>
-                    <th>Address</th>
-                    <th>Age</th>
+                    <th>姓名</th>
+                    <th>联系电话</th>
+                    <th>地址</th>
+                    <th>年龄</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -87,9 +87,8 @@
                                         onclick="showConfirmDelete({{$patient->id}},'{{$patient->first_name}} {{$patient->last_name?:''}}')">
                                     <i class="fa fa-recycle fa-lg" data-toggle="tooltip"
                                        data-placement="bottom" title=""
-                                       data-original-title="Delete this patient?
-                                       You won't be able to delete this patient if the patient has any records
-                                       associated to him/her in the system."></i>
+                                       data-original-title="确定删除病人信息?
+                                      如果系统中有这个病人的任何信息，将无法删除"></i>
                                 </button>
                             @endcan
                         </td>
@@ -120,6 +119,7 @@
 
     {{--Data Tables Scripts--}}
     <script>
+
         $(document).ready(function () {
             var tableFixed = $('#patientsTable').dataTable({
                 'pageLength': 10

@@ -1,6 +1,6 @@
 @extends("layouts.website.layout")
 
-@section("title",'chr247.com | Sign In')
+@section("title",'cmp247.com | Sign In')
 
 @section("content")
 
@@ -10,7 +10,7 @@
             <!-- For centering the content vertically -->
             <div class="outer">
                 <div class="inner text-center">
-                    <h1 class="">Please Sign in to Continue ...</h1>
+                    <h1 class="">请登录您的账号</h1>
                 </div> <!-- end inner -->
             </div> <!-- end outer -->
         </div> <!-- end container -->
@@ -32,7 +32,7 @@
                         <div class="alert alert-success alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
                             </button>
-                            <h4><i class="icon fa fa-check"></i> Success!</h4>
+                            <h4><i class="icon fa fa-check"></i> 登录成功!</h4>
                             {{session('success')}}
                         </div>
                     @endif
@@ -42,13 +42,13 @@
                         <div class="alert alert-danger alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
                             </button>
-                            <h4><i class="icon fa fa-ban"></i> Oops!</h4>
+                            <h4><i class="icon fa fa-ban"></i> 警告!</h4>
                             {{ $errors->first('general') }}
                         </div>
                     @endif
 
                     <div class="form-group col-md-12 has-feedback {{ $errors->has('username') ? 'has-error' : '' }}">
-                        <label for="username">Username</label>
+                        <label for="username">用户名</label>
                         <input type="text" class="form-control" name="username" id="username" placeholder="Username"
                                value="{{ old('username') }}">
                         @if ($errors->has('username'))
@@ -58,7 +58,7 @@
                         @endif
                     </div> <!-- end form-group -->
                     <div class="form-group col-md-12 has-feedback {{ $errors->has('password') ? 'has-error' : '' }}">
-                        <label for="password">Password</label>
+                        <label for="password">密码</label>
                         <input type="password" class="form-control" name="password" placeholder="Password"
                                value="{{old('password')}}">
                         @if ($errors->has('password'))
@@ -69,17 +69,17 @@
                     </div> <!-- end form-group -->
 
                     <div class="text-center col-md-12 mt10 mb20">
-                        <button type="submit" class="btn se-btn btn-rounded">Login</button>
+                        <button type="submit" class="btn se-btn btn-rounded">登录</button>
                     </div> <!-- end text-center -->
                 </form> <!-- end form -->
 
                 <div class="col-sm-6">
-                    <p class="text-muted"><a href="{{ url('/password/reset') }}">Forgot Password?</a></p>
+                    <p class="text-muted"><a href="{{ url('/password/reset') }}">忘记密码?</a></p>
                 </div>
 
                 <div class="col-sm-6 text-right">
                     <p class="text-muted mbn">
-                        Not registered yet? <a href="{{route('registerClinic')}}">Sign Up here!</a>
+                        还没有账号? <a href="{{route('registerClinic')}}">点此注册!</a>
                     </p>
                 </div>
             </div>

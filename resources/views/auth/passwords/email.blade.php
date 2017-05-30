@@ -1,6 +1,6 @@
 @extends("layouts.website.layout")
 
-@section("title",'chr247.com | Forgot Password')
+@section("title",'cmp247.com | Forgot Password')
 
 @section("content")
     <!-- ========== PAGE TITLE ========== -->

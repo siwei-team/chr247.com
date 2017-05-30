@@ -1,6 +1,6 @@
 @extends("layouts.website.layout")
 
-@section("title",'chr247.com | Privacy Policy')
+@section("title",'cmp247.com | Privacy Policy')
 
 @section("content")
 
@@ -10,8 +10,8 @@
             <!-- For centering the content vertically -->
             <div class="outer">
                 <div class="inner text-center">
-                    <h1 class="">chr247.com Privacy Policy</h1>
-                    <a href="{{route("registerClinic")}}" class="btn se-btn-black btn-rounded mt20">Register Now</a>
+                    <h1 class="">cmp247.com 隐私条款</h1>
+                    <a href="{{route("registerClinic")}}" class="btn se-btn-black btn-rounded mt20">现在注册</a>
 
                 </div> <!-- end inner -->
             </div> <!-- end outer -->
@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
                     <p>
-                        This privacy policy governs your use of the software/web application chr247.com
+                        This privacy policy governs your use of the software/web application cmp247.com
                         (“Application”). The Application is designed to manage patient records using a centralised
                         cloud.
                     </p>
@@ -77,7 +77,7 @@
                             this privacy statement.
                         </li>
                         <li>
-                            if chr247.com is involved in a merger, acquisition, or sale of all or a portion of its
+                            if cmp247.com is involved in a merger, acquisition, or sale of all or a portion of its
                             assets, you will be notified via email and/or a prominent notice on our Web site of any
                             change in ownership or uses of this information, as well as any choices you may have
                             regarding this information.
@@ -87,7 +87,7 @@
                     <h4> WHAT ARE MY OPT-OUT RIGHTS?</h4>
                     <p>
                         You can stop all collection of information by the Application easily by making a formal
-                        request at support@chr247.com.
+                        request at support@cmp247.com.
                     </p>
                     <h4>
                         DATA RETENTION POLICY, MANAGING YOUR INFORMATION
@@ -96,7 +96,7 @@
                         We will retain User Provided data for as long as you use the Application and for a
                         reasonable time thereafter. We will retain Automatically Collected information for up to 24
                         months and thereafter may store it in aggregate. If you’d like us to delete User Provided
-                        Data that you have provided via the Application, please contact us at support@chr247.com and
+                        Data that you have provided via the Application, please contact us at support@cmp247.com and
                         we will respond in a reasonable time. Please note that some or all of the User Provided Data
                         may be required in order for the Application to function properly.
                     </p>

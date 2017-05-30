@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>chr247.com | Prescription</title>
+    <title>cmp247.com | 处方卡</title>
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}" media="print">
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
@@ -24,14 +24,15 @@
 
                 <h3 class="center-block text-center">
                     {{$patient->clinic->name}}<br>
-                    <small>
-                        {{$patient->clinic->address}}<br>
-                        {{$patient->clinic->phone}}<br>
-                        {{$patient->clinic->email}}
-                    </small>
+
                 </h3>
+                <small style="text-align: right">
+                    {{$patient->clinic->address}}<br>
+                    {{$patient->clinic->phone}}<br>
+                    {{$patient->clinic->email}}
+                </small>
                 <h4 style="border-bottom: 2px solid black">
-                    <strong>Patient :</strong> {{$patient->first_name}} {{$patient->last_name}}
+                    <strong>患者 :</strong> {{$patient->first_name}} {{$patient->last_name}}
                     <small>{{$patient->dob ? Utils::getAge($patient->dob) : ""}}</small>
                     <span class="pull-right">{{Utils::getFormattedDate($prescription->created_at)}}</span>
                 </h4>
@@ -53,7 +54,7 @@
                         </ol>
 
                         @if($prescription->prescriptionPharmacyDrugs()->count()>0)
-                            <h4>Drugs to be taken from a pharmacy</h4>
+                            <h4>以下从药店选配药品</h4>
                             <ol class="col-xs-12">
                                 @foreach($prescription->prescriptionPharmacyDrugs as $index=>$pharmacyDrug)
                                     <li>
@@ -76,7 +77,7 @@
         {{-- Info message if there are no prescriptions to be issued --}}
         <div class="col-xs-6 col-xs-offset-3">
             <div class="alert alert-info" ng-if="prescriptions.length==0" ng-cloak>
-                <h4><i class="icon fa fa-info"></i> Sorry!</h4>
+                <h4><i class="icon fa fa-info"></i> 抱歉!</h4>
                 There's no drugs in this prescription to be printed.
             </div>
         </div>
@@ -84,23 +85,22 @@
 </div>
 
 <div class="row margin-top container-fluid no-print">
-    <div class="col-xs-6 col-xs-offset-3">
+    <div class="col-xs-6 col-xs-offset-3" style="display: none">
         <div class="alert alert-info" ng-if="prescriptions.length==0" ng-cloak>
-            <h4><i class="icon fa fa-info"></i> Important!</h4>
-            When printing the prescriptions, avoid printing <strong>headers and footers</strong> by changing
-            <strong>Print Settings</strong> from the print preview.
+            <h4><i class="icon fa fa-info"></i> 重要!</h4>
+            印刷处方时,避免打印页眉和页脚打印预览更改打印设置。
         </div>
     </div>
 
     <div class="col-md-2 col-md-offset-3">
         <button class="btn btn-primary pull-left" onclick="window.close()">
-            <i class="fa fa-close" aria-hidden="true"></i> Close
+            <i class="fa fa-close" aria-hidden="true"></i> 关闭
         </button>
     </div>
     {{--@if($prescription->prescriptionPharmacyDrugs()->count()>0)--}}
     <div class="col-md-2 col-md-offset-2">
         <button class="btn btn-primary pull-right" onclick="window.print()">
-            <i class="fa fa-print" aria-hidden="true"></i> Print
+            <i class="fa fa-print" aria-hidden="true"></i> 打印
         </button>
     </div>
     {{--@endif--}}

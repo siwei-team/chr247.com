@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title',"CHR247 | Reset Password")
+@section('title',"cmp247 | Reset Password")
 
 @section('content')
     <div class="container" xmlns="http://www.w3.org/1999/html">

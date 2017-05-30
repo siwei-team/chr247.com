@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">×</span></button>
-                <h4 class="modal-title">{{$patient->first_name}} {{$patient->last_name}} - Edit info</h4>
+                <h4 class="modal-title">{{$patient->first_name}} {{$patient->last_name}} - 编辑信息</h4>
             </div>
 
             <form class="form-horizontal" method="post" action="{{route('editPatient',['id'=>$patient->id])}}">
@@ -15,7 +15,7 @@
                     @if ($errors->has('general'))
                         <div class="alert alert-danger alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h4><i class="icon fa fa-ban"></i> Oops!</h4>
+                            <h4><i class="icon fa fa-ban"></i> 警告!</h4>
                             {{ $errors->first('general') }}
                         </div>
                     @endif
@@ -23,7 +23,7 @@
                     {{csrf_field()}}
 
                     <div class="form-group{{ $errors->has('firstName') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">First Name</label>
+                        <label class="col-md-3 control-label">姓氏</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="firstName"
                                    value="{{ old('firstName')?:$patient->first_name }}" required>
@@ -36,7 +36,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('lastName') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Last Name</label>
+                        <label class="col-md-3 control-label">名字</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="lastName"
                                    value="{{ old('lastName')?:$patient->last_name }}">
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('dob') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Date of Birth</label>
+                        <label class="col-md-3 control-label">出生日期</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control birthdaypicker" name="dob"
                                    value="{{ old('dob')?: date('Y/m/d',strtotime($patient->dob))}}">
@@ -63,18 +63,18 @@
 
 
                     <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Gender</label>
+                        <label class="col-md-3 control-label">性别</label>
                         <div class="col-md-9 radio">
                             <label>
                                 <input type="radio" name="gender" value="Male"
                                        @if(Utils::isMale($patient)) checked @endif>
-                                Male
+                                男
                             </label>
                             <br>
                             <label>
                                 <input type="radio" name="gender" value="Female"
                                        @if(Utils::isFemale($patient)) checked @endif>
-                                Female
+                                女
                             </label>
                             @if ($errors->has('gender'))
                                 <span class="help-block">
@@ -85,7 +85,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Address</label>
+                        <label class="col-md-3 control-label">地址</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="address"
                                    value="{{ old('address')?:$patient->address }}">
@@ -111,7 +111,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Contact No.</label>
+                        <label class="col-md-3 control-label">手机号</label>
                         <div class="col-md-9">
                             <input type="tel" class="form-control" name="phone"
                                    value="{{ old('phone')?:$patient->phone }}">
@@ -125,7 +125,7 @@
 
                     <?php $bloodGroups = ["N/A", "A +", "A-", "B +", "B -", "AB +", "AB -", "O +", "O -"]; ?>
                     <div class="form-group{{ $errors->has('bloodGroup') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Blood Group</label>
+                        <label class="col-md-3 control-label">血型</label>
                         <div class="col-md-9">
                             <select name="bloodGroup" class="form-control">
                                 @foreach($bloodGroups as $bloodGroup)
@@ -144,7 +144,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('allergies') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Known Allergies</label>
+                        <label class="col-md-3 control-label">过敏史</label>
                         <div class="col-md-9">
                             <textarea class="form-control" name="allergies"
                                       rows="2">{{old('allergies')?:$patient->allergies}}</textarea>
@@ -158,7 +158,7 @@
 
 
                     <div class="form-group{{ $errors->has('familyHistory') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Family History</label>
+                        <label class="col-md-3 control-label">家族病史</label>
                         <div class="col-md-9">
                             <textarea class="form-control" placeholder="Notable medical conditions run in the family"
                                       name="familyHistory"
@@ -173,7 +173,7 @@
 
 
                     <div class="form-group{{ $errors->has('medicalHistory') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Medical History</label>
+                        <label class="col-md-3 control-label">病史</label>
                         <div class="col-md-9">
                             <textarea class="form-control" rows="2"
                                       name="medicalHistory">{{old('medicalHistory')?:$patient->medical_history}}</textarea>
@@ -186,7 +186,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('postSurgicalHistory') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Post Surgical History</label>
+                        <label class="col-md-3 control-label">柱外科历史</label>
                         <div class="col-md-9">
                             <textarea class="form-control" rows="2"
                                       name="postSurgicalHistory">{{old('postSurgicalHistory')?:$patient->post_surgical_history}}</textarea>
@@ -199,7 +199,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('remarks') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Remarks</label>
+                        <label class="col-md-3 control-label">备注</label>
                         <div class="col-md-9">
                             <textarea class="form-control" rows="2"
                                       name="remarks">{{old('remarks')?:$patient->remarks}}</textarea>
@@ -214,8 +214,8 @@
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary pull-right">Save Changes</button>
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary pull-right">保存改动</button>
                 </div><!-- /.box-footer -->
             </form>
 

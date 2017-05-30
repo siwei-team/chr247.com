@@ -17,7 +17,7 @@ $user = \App\User::getCurrentUser();
           100% Free! ZERO-Paper Policy!">
     <meta name="keywords"
           content="emr, his, health informatics, health cloud, cloud health records, clinic, patient management">
-    <meta name="author" content="chr247.com">
+    <meta name="author" content="cmp247.com">
 
     <link rel="shortcut" href="{{asset('favicon.ico')}}"/>
     <!-- Tell the browser to be responsive to screen width -->
@@ -60,9 +60,9 @@ $user = \App\User::getCurrentUser();
         <!-- Logo -->
         <a href="{{url('/')}}" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>CHR</b></span>
+            <span class="logo-mini"><b>CMP</b></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>CHR</b> 24x7</span>
+            <span class="logo-lg"><b>CMP</b> 24x7</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -97,10 +97,10 @@ $user = \App\User::getCurrentUser();
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="{{url('/settings')}}" class="btn btn-default btn-flat">Settings</a>
+                                    <a href="{{url('/settings')}}" class="btn btn-default btn-flat">设置</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="{{url('logout')}}" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="{{url('logout')}}" class="btn btn-default btn-flat">退出</a>
                                 </div>
                             </li>
                         </ul>
@@ -131,7 +131,7 @@ $user = \App\User::getCurrentUser();
             <form action="{{route('search')}}" method="get" class="sidebar-form">
                 {{csrf_field()}}
                 <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search..." required>
+                    <input type="text" name="q" class="form-control" placeholder="搜索..." required>
                     <span class="input-group-btn">
                         <button type="submit" id="search-btn" class="btn btn-flat">
                             <i class="fa fa-search"></i>
@@ -145,7 +145,7 @@ $user = \App\User::getCurrentUser();
             <ul class="sidebar-menu">
                 <li @if(url('/')===Request::url()) class="active" @endif>
                     <a href="{{url('/')}}">
-                        <i class="fa fa-h-square"></i> <span>Home</span>
+                        <i class="fa fa-h-square"></i> <span>主页</span>
                         <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                            data-placement="bottom" title="" data-original-title="Get an overview of your
                            clinic including number of patients and patient visits"></i>
@@ -154,7 +154,7 @@ $user = \App\User::getCurrentUser();
 
                 <li @if(strpos(Request::url(),'patients')!=false) class="active" @endif>
                     <a href="{{url('patients')}}">
-                        <i class="fa fa-wheelchair"></i> <span>Patients</span>
+                        <i class="fa fa-wheelchair"></i> <span>病人</span>
                         <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                            data-placement="bottom" title="" data-original-title="View all the patients and
                            patient profiles, prescribe medicine and view medical records of each patient"></i>
@@ -163,7 +163,7 @@ $user = \App\User::getCurrentUser();
 
                 <li @if(strpos(Request::url(),'drugs')!=false) class="active" @endif>
                     <a href="{{url('drugs')}}">
-                        <i class="fa fa-stethoscope"></i> <span>Drugs</span>
+                        <i class="fa fa-stethoscope"></i> <span>药品</span>
                         <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                            data-placement="bottom" title="" data-original-title="Manage your drug inventory.
                            The drugs in your drug inventory will be available under drugs
@@ -174,7 +174,7 @@ $user = \App\User::getCurrentUser();
                 @can('issueMedicine','App\Patient')
                     <li @if(strpos(Request::url(),'issueMedicine')!=false) class="active" @endif>
                         <a href="{{url('issueMedicine')}}">
-                            <i class="fa fa-medkit"></i> <span>Issue Medicine</span>
+                            <i class="fa fa-medkit"></i> <span>处方</span>
                             <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                                data-placement="bottom" title=""
                                data-original-title="An interface focused on the 'Nurse' type users.
@@ -186,7 +186,7 @@ $user = \App\User::getCurrentUser();
 
                 <li @if(strpos(Request::url(),'queue')!=false) class="active" @endif>
                     <a href="{{url('queue')}}">
-                        <i class="fa fa-ambulance"></i> <span>Queue</span>
+                        <i class="fa fa-ambulance"></i> <span>队列</span>
                         <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                            data-placement="bottom" title=""
                            data-original-title="Interface to manage the session's patient queue.
@@ -197,7 +197,7 @@ $user = \App\User::getCurrentUser();
 
                 <li @if(strpos(Request::url(),'feedback')!=false) class="active" @endif>
                     <a href="{{url('feedback')}}">
-                        <i class="fa fa-thumbs-o-up"></i> <span>Feedback</span>
+                        <i class="fa fa-thumbs-o-up"></i> <span>反馈</span>
                         <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                            data-placement="bottom" title=""
                            data-original-title="We need your feedback (complaints, suggestions) to improve this system.
@@ -217,7 +217,7 @@ $user = \App\User::getCurrentUser();
         <section class="content-header">
             <h1>
                 @yield('page_header')
-                <small>@yield('sub_header','Cloud Health Records - CHR 24x7')</small>
+                <small>@yield('sub_header','云医疗平台 - CMP 24x7')</small>
             </h1>
             @yield('breadcrumb','')
         </section>
@@ -235,7 +235,7 @@ $user = \App\User::getCurrentUser();
         <div class="pull-right hidden-xs">
             <b>Version</b> 1.0.0
         </div>
-        <strong>Copyright &copy; <a href="#">chr247.com</a>.</strong> All rights
+        <strong>Copyright &copy; <a href="#">cmp247.com</a>.</strong> All rights
         reserved.
     </footer>
 </div><!-- ./wrapper -->

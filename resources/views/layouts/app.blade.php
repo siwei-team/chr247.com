@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
-        @yield('title',"CHR247 | Cloud Health Records 24x7")
+        @yield('title',"cmp247 | Cloud Health Records 24x7")
     </title>
 
     <meta name="description"
@@ -12,7 +12,7 @@
           100% Free! ZERO-Paper Policy!">
     <meta name="keywords"
           content="emr, his, health informatics, health cloud, cloud health records, clinic, patient management">
-    <meta name="author" content="chr247.com">
+    <meta name="author" content="cmp247.com">
 
     <link rel="shortcut" href="favicon.ico"/>
     <!-- Tell the browser to be responsive to screen width -->
@@ -87,7 +87,7 @@
             <div class="pull-right hidden-xs">
                 <b>Version</b> 1.0.0
             </div>
-            <strong>Copyright &copy; <a href="#">chr247.com</a>.</strong> All rights
+            <strong>Copyright &copy; <a href="#">cmp247.com</a>.</strong> All rights
             reserved.
         </div><!-- /.container -->
     </footer>

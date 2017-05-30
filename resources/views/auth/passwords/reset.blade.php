@@ -1,6 +1,6 @@
 @extends("layouts.website.layout")
 
-@section("title",'chr247.com | Reset Password')
+@section("title",'cmp247.com | Reset Password')
 
 @section("content")
     <!-- ========== PAGE TITLE ========== -->
@@ -10,7 +10,7 @@
             <div class="outer">
                 <div class="inner text-center">
                     <h1 class="">Reset Your Password</h1>
-                    <h5 class="">You can login to chr247.com once you reset the password</h5>
+                    <h5 class="">You can login to cmp247.com once you reset the password</h5>
                 </div> <!-- end inner -->
             </div> <!-- end outer -->
         </div> <!-- end container -->

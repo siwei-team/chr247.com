@@ -1,6 +1,6 @@
 @extends("layouts.website.layout")
 
-@section("title",'chr247.com | Register Clinic')
+@section("title",'cmp247.com | Register Clinic')
 
 @section("content")
     <!-- ========== PAGE TITLE ========== -->
@@ -9,8 +9,8 @@
             <!-- For centering the content vertically -->
             <div class="outer">
                 <div class="inner text-center">
-                    <h1 class="">Register Clinic</h1>
-                    <h5 class="">You are one step away from experiencing the awesomeness of chr247.com</h5>
+                    <h1 class="">注册诊所</h1>
+                    <h5 class="">距离体验cmp247.com更近一步了</h5>
                 </div> <!-- end inner -->
             </div> <!-- end outer -->
         </div> <!-- end container -->
@@ -47,7 +47,7 @@
 
 
                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">Clinic Name</label>
+                        <label class="col-md-4 control-label">诊所名称</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control" name="name" value="{{ old('name') }}">
 
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">E-Mail Address</label>
+                        <label class="col-md-4 control-label">电子邮件地址</label>
 
                         <div class="col-md-6">
                             <input type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -74,7 +74,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">Address</label>
+                        <label class="col-md-4 control-label">地址</label>
 
                         <div class="col-md-6">
                             <input type="text" class="form-control" name="address" value="{{old('address')}}">
@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">Phone</label>
+                        <label class="col-md-4 control-label">手机号</label>
 
                         <div class="col-md-6">
                             <input type="tel" class="form-control" name="phone" value="{{old('phone')}}">
@@ -103,7 +103,7 @@
 
                     {{--Include countries list--}}
                     <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">Country</label>
+                        <label class="col-md-4 control-label">国家</label>
 
                         <div class="col-md-6">
                             <select name="country" class="form-control" ng-model="countryCode"
@@ -128,7 +128,7 @@
 
 
                     <div class="form-group{{ $errors->has('timezone') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">Timezone</label>
+                        <label class="col-md-4 control-label">时区</label>
 
                         <div class="col-md-6">
                             <select name="timezone" class="form-control" ng-disabled="!countryCode">
@@ -143,7 +143,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('currency') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">Currency</label>
+                        <label class="col-md-4 control-label">货币</label>
 
                         <div class="col-md-6">
                             <input type="text" class="form-control" name="currency" value="{{old('currency')}}">
@@ -161,16 +161,15 @@
                     <div class="box box-default">
                         <div class="box-body">
 
-                            <div class="alert alert-info alert-dismissable">
+                            <div class="alert alert-info alert-dismissable" style="display: none">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
                                 </button>
-                                <h4><i class="icon fa fa-info"></i> Important!</h4>
-                                An admin account is created when registering a clinic.
-                                Please fill in the preferred admin account username and password.
+                                <h4><i class="icon fa fa-info"></i> 重要!</h4>
+                                注册诊所时会创建管理员帐户。请填写首选的管理帐户用户名和密码。
                             </div>
 
                             <div class="form-group{{ $errors->has('adminName') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">Admin's Name</label>
+                                <label class="col-md-4 control-label">管理员名称</label>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="adminName"
                                            value="{{old('adminName')}}">
@@ -183,7 +182,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">Admin Username</label>
+                                <label class="col-md-4 control-label">管理员用户名</label>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="username"
                                            value="{{old('username')}}">
@@ -196,7 +195,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">Password</label>
+                                <label class="col-md-4 control-label">密码</label>
                                 <div class="col-md-6">
                                     <input type="password" class="form-control" name="password"
                                            value="{{old('password')}}">
@@ -209,7 +208,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">Password Confirmation</label>
+                                <label class="col-md-4 control-label">确认密码</label>
                                 <div class="col-md-6">
                                     <input type="password" class="form-control" name="password_confirmation"
                                            value="{{old('password_confirmation')}}">
@@ -228,11 +227,9 @@
                         <div class="col-md-6 col-md-offset-4">
                             <div class="checkbox icheck">
                                 <label>
-                                    <input type="checkbox" name="terms" id="checkbox"> I hereby agree on CHR247.com's
-                                    <a href="#" data-toggle="modal" data-target="#privacyPolicyModal">Privacy
-                                        Policy</a> and
-                                    <a href="#" data-toggle="modal" data-target="#termsModal">Terms &
-                                        Conditions</a>
+                                    <input type="checkbox" name="terms" id="checkbox"> 我已同意 CMP247.COM 的
+                                    <a href="#" data-toggle="modal" data-target="#privacyPolicyModal">隐私政策</a> 和
+                                    <a href="#" data-toggle="modal" data-target="#termsModal">条款和条件</a>
                                 </label>
                             </div>
                             @if ($errors->has('terms'))
@@ -245,7 +242,7 @@
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
                             <button type="submit" class="btn btn-primary btn-flat">
-                                <i class="fa fa-btn fa-check"></i> Register
+                                <i class="fa fa-btn fa-check"></i> 注册
                             </button>
                         </div>
                     </div>

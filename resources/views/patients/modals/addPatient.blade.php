@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Add Patient</h4>
+                <h4 class="modal-title">添加病人</h4>
             </div>
 
             <form class="form-horizontal" method="post" action="{{route('addPatient')}}">
@@ -23,7 +23,7 @@
                     {{csrf_field()}}
 
                     <div class="form-group{{ $errors->has('firstName') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">First Name</label>
+                        <label class="col-md-3 control-label">姓氏</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="firstName" value="{{ old('firstName') }}"
                                    required>
@@ -36,7 +36,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('lastName') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Last Name</label>
+                        <label class="col-md-3 control-label">名字</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="lastName" value="{{ old('lastName') }}">
                             @if ($errors->has('lastName'))
@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('dob') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Date of Birth</label>
+                        <label class="col-md-3 control-label">出生日期</label>
                         <div class="col-md-9">
                             <input class="form-control birthdaypicker" type="text" id="dob" name="dob"
                                    value="{{old('dob')}}">
@@ -62,16 +62,16 @@
 
 
                     <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Gender</label>
+                        <label class="col-md-3 control-label">性别</label>
                         <div class="col-md-9 radio">
                             <label>
                                 <input type="radio" name="gender" value="Male" checked="checked">
-                                Male
+                                男
                             </label>
                             <br>
                             <label>
-                                <input type="radio" name="gender" value="Female">
-                                Female
+                                <input type="radio" name="gender" value="FeMale">
+                                女
                             </label>
                             @if ($errors->has('gender'))
                                 <span class="help-block">
@@ -82,7 +82,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Address</label>
+                        <label class="col-md-3 control-label">地址</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="address" value="{{ old('address') }}">
                             @if ($errors->has('address'))
@@ -107,7 +107,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Contact No.</label>
+                        <label class="col-md-3 control-label">手机号</label>
                         <div class="col-md-9">
                             <input type="tel" class="form-control" name="phone" value="{{ old('phone') }}">
                             @if ($errors->has('phone'))
@@ -120,7 +120,7 @@
 
                     <?php $bloodGroups = ["N/A", "A +", "A-", "B +", "B -", "AB +", "AB -", "O +", "O -"]; ?>
                     <div class="form-group{{ $errors->has('bloodGroup') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Blood Group</label>
+                        <label class="col-md-3 control-label">血型</label>
                         <div class="col-md-9">
                             <select name="bloodGroup" class="form-control">
                                 @foreach($bloodGroups as $bloodGroup)
@@ -139,7 +139,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('allergies') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Known Allergies</label>
+                        <label class="col-md-3 control-label">过敏史</label>
                         <div class="col-md-9">
                             <textarea class="form-control" name="allergies" rows="2">{{old('allergies')}}</textarea>
                             @if ($errors->has('allergies'))
@@ -152,7 +152,7 @@
 
 
                     <div class="form-group{{ $errors->has('familyHistory') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Family History</label>
+                        <label class="col-md-3 control-label">家族病史</label>
                         <div class="col-md-9">
                             <textarea class="form-control" placeholder="Notable medical conditions run in the family"
                                       name="familyHistory" rows="2">{{old('familyHistory')}}</textarea>
@@ -166,7 +166,7 @@
 
 
                     <div class="form-group{{ $errors->has('medicalHistory') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Medical History</label>
+                        <label class="col-md-3 control-label">病史</label>
                         <div class="col-md-9">
                             <textarea class="form-control" rows="2"
                                       name="medicalHistory">{{old('medicalHistory')}}</textarea>
@@ -179,7 +179,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('postSurgicalHistory') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Post Surgical History</label>
+                        <label class="col-md-3 control-label">柱外科历史</label>
                         <div class="col-md-9">
                             <textarea class="form-control" rows="2"
                                       name="postSurgicalHistory">{{old('postSurgicalHistory')}}</textarea>
@@ -192,7 +192,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('remarks') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Remarks</label>
+                        <label class="col-md-3 control-label">备注</label>
                         <div class="col-md-9">
                             <textarea class="form-control" rows="2" name="remarks">{{old('remarks')}}</textarea>
                             @if ($errors->has('remarks'))
@@ -206,8 +206,8 @@
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary pull-right">Add</button>
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary pull-right">保存</button>
                 </div><!-- /.box-footer -->
             </form>
 

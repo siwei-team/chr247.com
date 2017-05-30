@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title',"CHR247 | Register")
+@section('title',"cmp247 | Register")
 
 @section('content')
 
@@ -228,7 +228,7 @@
                                 <div class="col-md-6 col-md-offset-4">
                                     <div class="checkbox icheck">
                                         <label>
-                                            <input type="checkbox" name="terms"> I hereby agree on CHR247.com's
+                                            <input type="checkbox" name="terms"> I hereby agree on cmp247.com's
                                             <a href="#" data-toggle="modal" data-target="#privacyPolicyModal">Privacy
                                                 Policy</a> and
                                             <a href="#" data-toggle="modal" data-target="#termsModal">Terms &

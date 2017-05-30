@@ -8,27 +8,27 @@
             </div>
             <div class="modal-body">
                 <h4>1. ACCEPTANCE OF THE TERMS OF SERVICE</h4>
-                <p> Welcome to chr247.com (a.k.a. "we" or "us"). We are excited to have you as user and
+                <p> Welcome to cmp247.com (a.k.a. "we" or "us"). We are excited to have you as user and
                     member
                     of the platform. The following terms and conditions (collectively, these "Terms of
                     Service")
-                    apply to your use of www.chr247.com, including any content, functionality and
+                    apply to your use of www.cmp247.com, including any content, functionality and
                     services
-                    offered on or via chr247.com web app (the "Website"). The Terms of Service also
+                    offered on or via cmp247.com web app (the "Website"). The Terms of Service also
                     include our
                     Privacy Policy, that you can review here: Privacy Policy
                 </p>
                 <p>
                     We want to keep our relationship with you as lean and informal as possible, but
                     please read
-                    the Terms of Service carefully before you start using chr247.com, because by using
+                    the Terms of Service carefully before you start using cmp247.com, because by using
                     the
                     Website/Web App you accept and agree to be bound and abide by these Terms of
                     Service.
                     Should you disagree with some of the provisions herein, you can either leave the
                     Website
-                    (although we'll be sad to see you go!), or contact us at support@chr247.com.
-                    chr247.com is
+                    (although we'll be sad to see you go!), or contact us at support@cmp247.com.
+                    cmp247.com is
                     all about manageing health records int he cloud and we'll be happy to hear your
                     comments and
                     suggestions.
@@ -36,13 +36,13 @@
 
                 <h4> 2. CHANGES TO THE TERMS OF SERVICE AND THE WEBSITE</h4>
                 <p>
-                    chr247.com is a work in progress, meaning that a lot will change in the near future.
+                    cmp247.com is a work in progress, meaning that a lot will change in the near future.
                     We
                     reserve the right to update the Website/Web App and these Terms of Service from time
                     to
                     time, at our discretion. We will make sure to announce any major change in a
                     prominent
-                    way.This document is public on chr247.com.com, and you will be able to see the
+                    way.This document is public on cmp247.com.com, and you will be able to see the
                     changes for
                     any new version. Your continued use of the Website/Web App following the publishing
                     of
@@ -51,7 +51,7 @@
                 <h4>
                     3. ACCESSING THE WEBSITE,SECURITY AND PRIVACY</h4>
                 <p>
-                    We are working hard on improving chr247.com, but we can't guarantee that the Website
+                    We are working hard on improving cmp247.com, but we can't guarantee that the Website
                     will be
                     up and running 24/7. We also reserve the right to suspend or restrict access to some
                     features to users. In any case, we will not be liable if for any reason all or any
@@ -64,7 +64,7 @@
                     email and
                     choosing a password as part of our security procedures. You must treat such
                     information as
-                    confidential, not disclosing it to any third party and only using chr247.com in
+                    confidential, not disclosing it to any third party and only using cmp247.com in
                     person.
                     There is a password reset procedure in case you forget your password, but please
                     notify us
@@ -99,11 +99,11 @@
                     are owned
                     by ehr247.com and are protected by Australian & international copyright, trademark,
                     patent,
-                    trade secret and other intellectual property or proprietary rights laws. chr247.com
+                    trade secret and other intellectual property or proprietary rights laws. cmp247.com
                     is about
                     helath records management. If you have doubts about whether and how to use of
                     material on
-                    the Website/Web App, please address your concerns to: support@chr247.com.
+                    the Website/Web App, please address your concerns to: support@cmp247.com.
                 </p>
                 <p>
                     For purposes of these Terms of Service, the term “Content” includes, without
@@ -206,7 +206,7 @@
                     5. USER CONTRIBUTIONS AND CONTENT STANDARDS. SPECIAL DISCLAIMER FOR LEGAL
                     CONTENT</h4>
                 <p>
-                    chr247.com contains user generated content, and also may contain message boards,
+                    cmp247.com contains user generated content, and also may contain message boards,
                     personal
                     web pages, forums or other interactive features that allow you to upload, post,
                     submit,
@@ -267,7 +267,7 @@
                     <li>
                         Not promote, sell, advertise, recommend drugs (narcotics).
                         Consec Technologies will not undertake any liability for content visible on
-                        chr247.com
+                        cmp247.com
                         website/ web app.
                     </li>
                 </ul>
@@ -286,22 +286,22 @@
                     disclose user
                     identities when required to do so by the law, including in response to a law
                     enforcement
-                    request supported by a valid court order. You waive and hold harmless the chr247.com
+                    request supported by a valid court order. You waive and hold harmless the cmp247.com
                     from
-                    any claims resulting from any action taken by the chr247.com during or as a result
+                    any claims resulting from any action taken by the cmp247.com during or as a result
                     of its
                     investigations and from any actions taken as a consequence of investigations by
                     either the
-                    chr247.com or law enforcement authorities.
-                    *If you notice, any breach of chr247.com policies, workplace policies, intellectual
+                    cmp247.com or law enforcement authorities.
+                    *If you notice, any breach of cmp247.com policies, workplace policies, intellectual
                     property
                     and copyright infringements, please contact Consec Technologies immediately using
-                    support@chr247.com.
+                    support@cmp247.com.
                 </p>
                 <h4>
                     7. DISCLAIMER OF WARRANTIES, LIMITATIONS OF LIABILITY AND INDEMNIFICATION</h4>
                 <p>
-                    Your use of chr247.com is at your sole risk. The service is provided "as is" and "as
+                    Your use of cmp247.com is at your sole risk. The service is provided "as is" and "as
                     available". We disclaim all warranties of any kind, express or implied, including,
                     without
                     limitation, the warranties of merchantability, fitness for a particular purpose and
@@ -342,7 +342,7 @@
                     shall not
                     constitute a waiver of such right or provision. The Terms of Service constitutes the
                     entire
-                    agreement between you and chr247.com/Consec Technologies and govern your use of the
+                    agreement between you and cmp247.com/Consec Technologies and govern your use of the
                     service,
                     superseding any prior agreements (including, but not limited to, any prior versions
                     of the
@@ -355,7 +355,7 @@
                 <h4>
                     10. FEEDBACK</h4>
                 <p>
-                    We welcome any comment, questions and communication at support@chr247.com
+                    We welcome any comment, questions and communication at support@cmp247.com
                 </p>
 
             </div>

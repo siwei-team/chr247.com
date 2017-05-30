@@ -23,9 +23,9 @@ class Utils {
         $d    = date_diff(date_create($date), date_create('today'));
         $text = "";
         if ($date) {
-            $text .= $d->y == 0 ? "" : $d->y . " yrs";
-            $text .= $d->y < 5 ? " " . $d->m . " months" : "";
-            $text .= $d->y < 1 ? " " . $d->d . " days" : "";
+            $text .= $d->y == 0 ? "" : $d->y . " 岁";
+            $text .= $d->y < 5 ? " " . $d->m . " 月" : "";
+            $text .= $d->y < 1 ? " " . $d->d . " 天" : "";
         }
 
         return $date ? $text : "-";
@@ -43,7 +43,7 @@ class Utils {
             $timestamp = Carbon::parse($timestamp);
         }
 
-        return date("jS M, Y h:i A", strtotime($timestamp->timezone($clinic->timezone)));
+        return date("Y-m-d H:m:s", strtotime($timestamp->timezone($clinic->timezone)));
     }
 
     /**
@@ -55,7 +55,7 @@ class Utils {
         $clinic = Clinic::getCurrentClinic();
         $date   = date_create($date, timezone_open($clinic->timezone));
 
-        return date_format($date, "jS M, Y");
+        return date_format($date, "Y-m-d");
     }
 
 

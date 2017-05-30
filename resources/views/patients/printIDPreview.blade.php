@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Print ID | Preview</title>
+    <title>打印 ID | 预览</title>
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}" media="print">
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
@@ -21,12 +21,12 @@
     <div class="col-md-6 col-md-offset-3 col-xs-12">
         <div class="panel panel-primary" id="patientID">
             <div class="panel-heading">
-                <h4 class="panel-title">{{$patient->clinic->name}} - Patient ID</h4>
+                <h4 class="panel-title">{{$patient->clinic->name}} - 病例卡</h4>
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-xs-3">
-                        <h4>Clinic's Information</h4>
+                        <h4>诊所信息</h4>
                     </div>
                     <div class="col-xs-9">
                         <h5>
@@ -39,7 +39,7 @@
 
                 <div class="row">
                     <div class="col-xs-3">
-                        <h4>Patient's Information</h4>
+                        <h4>患者信息</h4>
                     </div>
                     <div class="col-xs-9">
                         <h4>
@@ -73,12 +73,12 @@
 <div class="row margin-top container-fluid no-print">
     <div class="col-md-2 col-md-offset-3">
         <a href="{{route("patient",['id'=>$patient->id])}}" class="btn btn-primary pull-left">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Patient
+            <i class="fa fa-chevron-left" aria-hidden="true"></i> 返回病人信息
         </a>
     </div>
     <div class="col-md-2 col-md-offset-2">
         <button class="btn btn-primary pull-right" onclick="window.print()">
-            <i class="fa fa-print" aria-hidden="true"></i> Print
+            <i class="fa fa-print" aria-hidden="true"></i> 打印
         </button>
     </div>
 </div>

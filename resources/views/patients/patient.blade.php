@@ -2,13 +2,13 @@
 
 
 @section('page_header')
-    {{$patient->first_name}} {{$patient->last_name?:''}} (Age : {{Utils::getAge($patient->dob)}})
+    {{$patient->first_name}} {{$patient->last_name?:''}} (年龄 : {{Utils::getAge($patient->dob)}})
 @endsection
 
 @section('breadcrumb')
     <ol class="breadcrumb">
-        <li><a href="{{route('root')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="{{route('patients')}}">Patients</a></li>
+        <li><a href="{{route('root')}}"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="{{route('patients')}}">病人记录</a></li>
         <li class="active" href="#">{{$patient->first_name}}</li>
     </ol>
 @endsection
@@ -29,25 +29,25 @@
             {{--Check whether the user has permissions to access these tasks--}}
             @can('edit',$patient)
                 <button class="btn btn-primary margin-left" data-toggle="modal" data-target="#editPatientModal">
-                    <i class="fa fa-edit fa-lg"></i> Edit Info
+                    <i class="fa fa-edit fa-lg"></i> 编辑信息
                 </button>
             @endcan
 
             @can('issueMedical',$patient)
                 <button class="btn btn-primary margin-left" data-toggle="modal" data-target="#addPatientModal">
-                    <i class="fa fa-stethoscope fa-lg"></i> Issue Medical
+                    <i class="fa fa-stethoscope fa-lg"></i> 医疗问题
                 </button>
             @endcan
 
             @can('issueID',$patient)
                 <a class="btn btn-primary margin-left" href="{{route('IDPreview',['id'=>$patient->id])}}">
-                    <i class="fa fa-tag fa-lg"></i> Issue ID
+                    <i class="fa fa-tag fa-lg"></i> 病例卡
                 </a>
             @endcan
 
             @can('addToQueue',$patient)
                 <a class="btn btn-primary margin-left" href="{{route('addToQueue',['patientId'=>$patient->id])}}">
-                    <i class="fa fa-plus fa-lg"></i> Add to Queue
+                    <i class="fa fa-plus fa-lg"></i> 添加到队列
                     <i class="fa fa-question-circle-o fa-lg" data-toggle="tooltip"
                        data-placement="bottom" title=""
                        data-original-title="Add this patient to the queue. You should start a queue before
@@ -62,7 +62,7 @@
             @if(session()->has('success'))
                 <div class="alert alert-success alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-check"></i> Success!</h4>
+                    <h4><i class="icon fa fa-check"></i> 成功!</h4>
                     {{session('success')}}
                 </div>
             @endif
@@ -71,7 +71,7 @@
             @if(session()->has('error'))
                 <div class="alert alert-danger alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-ban"></i> Error!</h4>
+                    <h4><i class="icon fa fa-ban"></i> 错误!</h4>
                     {{session('error')}}
                 </div>
             @endif
@@ -83,27 +83,25 @@
 
                     @can('view',$patient)
                         <li role="presentation" @if(Gate::denies('prescribeMedicine',$patient)) class="active" @endif>
-                            <a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a>
+                            <a href="#info" aria-controls="info" role="tab" data-toggle="tab">信息</a>
                         </li>
                     @endcan
 
                     @can('prescribeMedicine',$patient)
                         <li role="presentation" class="active">
-                            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Prescribe
-                                Medicine</a>
+                            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">处方药物</a>
                         </li>
                     @endcan
 
                     @can('issueMedicine',$patient)
                         <li role="presentation">
-                            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Issue Medicine</a>
+                            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">待处理问题</a>
                         </li>
                     @endcan
 
                     @can('viewMedicalRecords',$patient)
                         <li role="presentation">
-                            <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Medical
-                                Records</a>
+                            <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">就医记录</a>
                         </li>
                     @endcan
 

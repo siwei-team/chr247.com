@@ -51,7 +51,7 @@
                 <!-- small box -->
                 <div class="small-box bg-aqua">
                     <div class="inner">
-                        <h3>$ {{$payments}}</h3>
+                        <h3>¥ {{$payments}}</h3>
                         <p>总付款</p>
                     </div>
                     <div class="icon">

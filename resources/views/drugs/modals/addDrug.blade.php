@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Add Drug</h4>
+                <h4 class="modal-title">添加药品</h4>
             </div>
 
             <form class="form-horizontal" method="post" action="{{route('addDrug')}}">
@@ -36,7 +36,7 @@
 
                     <div class="form-group{{ $errors->has('drugName') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
-                            Drug Name
+                            药品名称
                             <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                                data-placement="bottom" title=""
                                data-original-title="Commercial/Brand name of the drug.
@@ -59,7 +59,7 @@
 
                     <div class="form-group{{ $errors->has('ingredient') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
-                            Ingredient
+                            成分
                             <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                                data-placement="bottom" title=""
                                data-original-title="Scientific name or the generic name of the drug.
@@ -82,7 +82,7 @@
 
                     <div class="form-group{{ $errors->has('quantityType') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
-                            Quantity Type
+                            数量类型
                             <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                                data-placement="bottom" title=""
                                data-original-title="The measurement used to measure the available quantity of a drug.
@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('manufacturer') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Manufacturer</label>
+                        <label class="col-md-3 control-label">厂商</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="manufacturer"
                                    ng-init="manufacturer='{{ old('manufacturer') }}'"
@@ -126,11 +126,11 @@
                     {{-- ================= Adding the initial Stock ================== --}}
                     @can('add','App\Stock')
                         <div class="box-header">
-                            <h4 class="box-title">Add Initial Stock (Optional)</h4>
+                            <h4 class="box-title">添加初始化库存 (可选)</h4>
                         </div>
                         <div class="container-fluid">
                             <div class="form-group{{ $errors->has('quantity') ? ' has-error' : '' }}">
-                                <label class="col-md-3 control-label">Quantity</label>
+                                <label class="col-md-3 control-label">数量</label>
                                 <div class="col-md-9">
                                     <input type="number" min="0" step="0.01" class="form-control" name="quantity"
                                            value="{{ old('quantity') }}">
@@ -143,7 +143,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('manufacturedDate') ? ' has-error' : '' }}">
-                                <label class="col-md-3 control-label">Manufactured Date</label>
+                                <label class="col-md-3 control-label">生产日期</label>
                                 <div class="col-md-9">
                                     <input type="text" class="form-control datepicker" name="manufacturedDate"
                                            value="{{ old('manufacturedDate') }}">
@@ -156,7 +156,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('receivedDate') ? ' has-error' : '' }}">
-                                <label class="col-md-3 control-label">Purchased Date</label>
+                                <label class="col-md-3 control-label">购买日期</label>
                                 <div class="col-md-9">
                                     <input type="text" class="form-control datepicker" name="receivedDate"
                                            value="{{ old('receivedDate') }}">
@@ -169,7 +169,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('expiryDate') ? ' has-error' : '' }}">
-                                <label class="col-md-3 control-label">Expiry Date</label>
+                                <label class="col-md-3 control-label">有效期</label>
                                 <div class="col-md-9">
                                     <input type="text" class="form-control datepicker" name="expiryDate"
                                            value="{{ old('expiryDate') }}">
@@ -182,7 +182,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('remarks') ? ' has-error' : '' }}">
-                                <label class="col-md-3 control-label">Remarks</label>
+                                <label class="col-md-3 control-label">备注</label>
                                 <div class="col-md-9">
                                     <textarea class="form-control" name="remarks" rows="2">{{old('remarks')}}</textarea>
                                     @if ($errors->has('remarks'))
@@ -199,8 +199,8 @@
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary pull-right">Add</button>
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary pull-right">保存</button>
                 </div><!-- /.box-footer -->
             </form>
 

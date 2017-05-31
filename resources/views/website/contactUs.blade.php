@@ -1,6 +1,6 @@
 @extends("layouts.website.layout")
 
-@section("title",'cmp247.com | Contact Us')
+@section("title",'cmp247.com | 联系我们')
 
 @section("content")
     <!-- ========== PAGE TITLE ========== -->

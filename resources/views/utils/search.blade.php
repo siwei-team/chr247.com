@@ -2,7 +2,7 @@
 
 
 @section('page_header')
-Search Results for "{{$query}}"
+    "{{$query}}" 的搜索结果
 @endsection
 
 
@@ -21,7 +21,7 @@ Search Results for "{{$query}}"
     <div class="box box-primary">
         <div class="box-header with-border">
             <h4 class="box-title">
-                Results from Patients
+                患者库中结果
             </h4>
         </div>
 
@@ -29,10 +29,10 @@ Search Results for "{{$query}}"
             <table class="table table-responsive table-condensed table-hover text-center" id="patientsTable">
                 <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Contact No.</th>
-                    <th>Address</th>
-                    <th>Age</th>
+                    <th>姓名</th>
+                    <th>联系方式</th>
+                    <th>地址</th>
+                    <th>年龄</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -63,7 +63,7 @@ Search Results for "{{$query}}"
     <div class="box box-primary">
         <div class="box-header with-border">
             <h4 class="box-title">
-                Results from Drugs
+                药品中结果
             </h4>
         </div>
 
@@ -71,10 +71,10 @@ Search Results for "{{$query}}"
             <table class="table table-responsive table-condensed table-hover text-center" id="drugsTable">
                 <thead>
                 <tr>
-                    <th>Drug Name</th>
-                    <th>Quantity Type</th>
-                    <th>Manufacturer</th>
-                    <th>Quantity</th>
+                    <th>药品名称</th>
+                    <th>数量类型</th>
+                    <th>厂商</th>
+                    <th>数量</th>
                 </tr>
                 </thead>
                 <tbody>

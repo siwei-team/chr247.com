@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Add Dosage Period</h4>
+                <h4 class="modal-title">添加剂量周期</h4>
             </div>
 
             <form class="form-horizontal" method="post" action="{{route('addPeriod')}}">
@@ -23,7 +23,7 @@
                     {{csrf_field()}}
 
                     <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Period Description</label>
+                        <label class="col-md-3 control-label">周期描述</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="description" value="{{ old('description') }}"
                                    required>
@@ -38,8 +38,8 @@
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary pull-right">Add</button>
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary pull-right">添加</button>
                 </div><!-- /.box-footer -->
             </form>
 

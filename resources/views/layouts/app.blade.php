@@ -55,7 +55,7 @@
                 <div class="navbar-header">
                     <div class="row">
                         <a href="{{url('/')}}" class="navbar-brand">
-                            <b>CHR 24x7 - Cloud Health Records</b>
+                            <b>CMP 24x7 - Cloud Medical Platform</b>
                             <small>Beta</small>
                         </a>
                     </div>
@@ -64,8 +64,8 @@
                 <!-- Navbar Right Menu -->
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{url('login')}}">Login</a></li>
-                        <li><a href="{{route('registerClinic')}}">Register</a></li>
+                        <li><a href="{{url('login')}}">登录</a></li>
+                        <li><a href="{{route('registerClinic')}}">注册</a></li>
                     </ul>
                 </div><!-- /.navbar-custom-menu -->
             </div><!-- /.container-fluid -->

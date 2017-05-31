@@ -52,7 +52,7 @@ class AdminController extends Controller {
             $clinic->quantityTypes()->saveMany($types);
 
             Mail::send('auth.emails.clinicAccepted', ['clinic' => $clinic], function ($m) use ($clinic) {
-                $m->to($clinic->email, $clinic->name)->subject('chr247.com - Clinic Accepted');
+                $m->to($clinic->email, $clinic->name)->subject('cmp247.com - 诊所申请通过');
             });
         } catch (Exception $e) {
             DB::rollBack();

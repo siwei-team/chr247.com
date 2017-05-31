@@ -1,6 +1,6 @@
 @extends("layouts.website.layout")
 
-@section("title",'cmp247.com | Privacy Policy')
+@section("title",'cmp247.com | 隐私条款')
 
 @section("content")
 

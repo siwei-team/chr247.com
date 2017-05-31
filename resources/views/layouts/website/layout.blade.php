@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 
     <!-- ========== PAGE TITLE ========== -->
-    <title>@yield("title",'cmp247.com | Cloud Health Records 24x7')</title>
+    <title>@yield("title",'CMP247 | 云医疗平台 24x7')</title>
 
     <meta name="description"
           content="The simplest Health Informatics System on the Cloud. For small scale clinics.

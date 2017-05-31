@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('page_header')
-    Queue
+    队列
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
             --}}
             @can('create','App\Queue')
             <button class="btn btn-primary margin-left" onclick="createQueue()">
-                <i class="fa fa-plus fa-lg"></i> Create New Queue
+                <i class="fa fa-plus fa-lg"></i> 创建一个新队列
             </button>
 
             <script>
@@ -34,7 +34,7 @@
 
             @can('close',$queue)
             <button class="btn btn-danger pull-right" onclick="closeQueue()">
-                <i class="fa fa-close fa-lg"></i> Close Queue
+                <i class="fa fa-close fa-lg"></i> 关闭队列
             </button>
 
             <script>
@@ -52,7 +52,7 @@
             @if(session()->has('success'))
                 <div class="alert alert-success alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-check"></i> Success!</h4>
+                    <h4><i class="icon fa fa-check"></i> 成功!</h4>
                     {{session('success')}}
                 </div>
             @endif
@@ -61,7 +61,7 @@
             @if(session()->has('error'))
                 <div class="alert alert-danger alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-ban"></i> Error!</h4>
+                    <h4><i class="icon fa fa-ban"></i> 错误!</h4>
                     {{session('error')}}
                 </div>
             @endif
@@ -75,19 +75,19 @@
                 {{-- Info message if there is no queue --}}
                 <div class="alert alert-warning alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-warning"></i> Sorry!</h4>
-                    No active queues at the moment! Please create a new queue to continue.
+                    <h4><i class="icon fa fa-warning"></i> 抱歉!</h4>
+                    目前没有有效的队列！请创建一个新的队列后继续。
                 </div>
 
             @else
                 {{-- Info message if there are patients in the queue --}}
                 <div class="alert alert-info" ng-if="patients.length==0" ng-cloak>
-                    <h4><i class="icon fa fa-info"></i> Sorry!</h4>
-                    No Patient in the queue at the moment.
+                    <h4><i class="icon fa fa-info"></i> 抱歉!</h4>
+                    此刻队列中没有病人。
                 </div>
 
                 <div class="alert alert-danger" ng-show="hasError" ng-cloak>
-                    <h4><i class="icon fa fa-ban"></i> Oops!</h4>
+                    <h4><i class="icon fa fa-ban"></i> 警告!</h4>
                     [[error]]
                 </div>
 

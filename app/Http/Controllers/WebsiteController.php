@@ -55,10 +55,10 @@ class WebsiteController extends Controller {
         ];
 
         try {
-            $emails = env("CONTACTUS_MAIL", "chr24x7@gmail.com");
+            $emails = env("CONTACTUS_MAIL", "cmp24x7@cmp247.com");
             $emails = explode(",", $emails);
             Mail::send('emails.contactUs', ['msg' => $data], function ($m) use ($emails) {
-                $m->to($emails)->subject('chr247.com - New Contact Us Message');
+                $m->to($emails)->subject('cmp247.com - 新联系我们消息');
             });
 
             Log::debug(self::LOG_CLASS_NAME . "contact us email sent successfully", $request->all());

@@ -2,7 +2,7 @@
 
 
 @section('page_header')
-    Drugs
+    药品库
 @endsection
 
 
@@ -19,7 +19,7 @@
                 @can('add','App\Drug')
                     <button class="btn btn-primary margin"
                             data-toggle="modal" data-target="#addDrugModal">
-                        Add Drug
+                        添加药品
                         <i class="fa fa-question-circle-o fa-lg" data-toggle="tooltip"
                            data-placement="bottom" title=""
                            data-original-title="Add a new drug to the inventory. Added drugs will be available to
@@ -28,7 +28,7 @@
                 @endcan
 
                 <a class="btn btn-primary margin pull-right" href="{{route('drugTypes')}}">
-                    Quantity Types
+                    数量类型
                     <i class="fa fa-question-circle-o fa-lg" data-toggle="tooltip"
                        data-placement="bottom" title=""
                        data-original-title="The measurements used to measure the available quantity(stock) of a drug.
@@ -36,7 +36,7 @@
                 </a>
 
                 <a class="btn btn-primary margin pull-right" href="{{route('dosages')}}">
-                    Dosages
+                    剂量类型
                     <i class="fa fa-question-circle-o fa-lg" data-toggle="tooltip"
                        data-placement="bottom" title=""
                        data-original-title="A pool of dosages which is to be used when prescribing medicine to patients."></i>
@@ -52,7 +52,7 @@
                 @if(session()->has('success'))
                     <div class="alert alert-success alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-check"></i> Success!</h4>
+                        <h4><i class="icon fa fa-check"></i> 成功!</h4>
                         {{session('success')}}
                     </div>
                 @endif
@@ -61,7 +61,7 @@
                 @if(session()->has('error'))
                     <div class="alert alert-danger alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-ban"></i> Error!</h4>
+                        <h4><i class="icon fa fa-ban"></i> 错误!</h4>
                         {{session('error')}}
                     </div>
                 @endif
@@ -79,11 +79,11 @@
                 <table class="table table-condensed table-hover text-center" id="drugsTable">
                     <thead>
                     <tr>
-                        <th>Drug Name</th>
-                        <th>Ingredient</th>
-                        <th>Quantity Type</th>
-                        <th>Manufacturer</th>
-                        <th>Quantity</th>
+                        <th>药品名称</th>
+                        <th>成分</th>
+                        <th>数量类型</th>
+                        <th>厂商</th>
+                        <th>数量</th>
                         <th></th>
                     </tr>
                     </thead>

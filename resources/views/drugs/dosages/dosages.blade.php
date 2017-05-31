@@ -2,15 +2,15 @@
 
 
 @section('page_header')
-    Dosages
+    剂量
 @endsection
 
 
 @section('breadcrumb')
     <ol class="breadcrumb">
-        <li><a href="{{route('root')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="{{route('drugs')}}">Drugs</a></li>
-        <li class="active" href="#">Dosages</li>
+        <li><a href="{{route('root')}}"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="{{route('drugs')}}">药品库</a></li>
+        <li class="active" href="#">剂量</li>
     </ol>
 @endsection
 
@@ -21,7 +21,7 @@
         <div class="box-header with-border">
             @can('add','App\Dosage')
                 <button class="btn btn-primary margin" data-toggle="modal" data-target="#addDosageModal">
-                    Add Dosage
+                    添加剂量
                     <i class="fa fa-question-circle-o fa-lg" data-toggle="tooltip"
                        data-placement="bottom" title=""
                        data-original-title="The quantities of drugs to be taken at a time.
@@ -29,14 +29,14 @@
                 </button>
 
                 <button class="btn btn-primary margin" data-toggle="modal" data-target="#addFrequencyModal">
-                    Add Dosage Frequency
+                    添加剂量频率
                     <i class="fa fa-question-circle-o fa-lg" data-toggle="tooltip"
                        data-placement="bottom" title=""
                        data-original-title="How often a drug is to be taken. ex: 3 times per day, per every 8 hours"></i>
                 </button>
 
                 <button class="btn btn-primary margin" data-toggle="modal" data-target="#addPeriodModal">
-                    Add Dosage Period
+                    添加剂量期
                     <i class="fa fa-question-circle-o fa-lg" data-toggle="tooltip"
                        data-placement="bottom" title=""
                        data-original-title="For how long a drug is to be taken. ex: For 3 weeks, For 6 months"></i>
@@ -51,7 +51,7 @@
                 @if(session()->has('success'))
                     <div class="alert alert-success alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-check"></i> Success!</h4>
+                        <h4><i class="icon fa fa-check"></i> 成功!</h4>
                         {{session('success')}}
                     </div>
                 @endif
@@ -59,7 +59,7 @@
                 @if(session()->has('error'))
                     <div class="alert alert-danger alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-ban"></i> Error!</h4>
+                        <h4><i class="icon fa fa-ban"></i> 错误!</h4>
                         {{session('error')}}
                     </div>
                 @endif
@@ -71,7 +71,7 @@
         {{-- Dosages --}}
         <div class="box box-success">
             <div class="box-header with-border">
-                <h4 class="box-title">Dosages
+                <h4 class="box-title">剂量
                     <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                        data-placement="bottom" title=""
                        data-original-title="The quantities of drugs to be taken at a time.
@@ -82,7 +82,7 @@
                 <table class="table table-responsive table-condensed table-hover text-center" id="dosagesTable">
                     <thead>
                     <tr>
-                        <th class="col-md-8">Dosage</th>
+                        <th class="col-md-8">剂量</th>
                         <th class="col-md-4"></th>
                     </tr>
                     </thead>
@@ -131,7 +131,7 @@
         {{-- Frequencies --}}
         <div class="box box-success">
             <div class="box-header with-border">
-                <h4 class="box-title">Dosage Frequencies
+                <h4 class="box-title">剂量频率
                     <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                        data-placement="bottom" title=""
                        data-original-title="How often a drug is to be taken. ex: 3 times per day, per every 8 hours"></i>
@@ -142,7 +142,7 @@
                        id="frequenciesTable">
                     <thead>
                     <tr>
-                        <th class="col-md-8">Frequency</th>
+                        <th class="col-md-8">频率</th>
                         <th class="col-md-4"></th>
                     </tr>
                     </thead>
@@ -194,7 +194,7 @@
         {{-- Periods --}}
         <div class="box box-success">
             <div class="box-header with-border">
-                <h4 class="box-title">Dosage Periods
+                <h4 class="box-title">剂量周期
                     <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                        data-placement="bottom" title=""
                        data-original-title="For how long a drug is to be taken. ex: For 3 weeks, For 6 months"></i>
@@ -204,7 +204,7 @@
                 <table class="table table-responsive table-condensed table-hover text-center" id="periodsTable">
                     <thead>
                     <tr>
-                        <th class="col-md-8">Period</th>
+                        <th class="col-md-8">周期</th>
                         <th class="col-md-4"></th>
                     </tr>
                     </thead>

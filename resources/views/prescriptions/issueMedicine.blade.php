@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('page_header')
-    Issue Medicine
+    待处理处方
 @endsection
 
 @section('content')
@@ -21,7 +21,7 @@
                 {{--Success Mesage--}}
                 <div class="alert alert-success alert-dismissable" ng-show="hasSuccess" ng-cloak>
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-check"></i> Success!</h4>
+                    <h4><i class="icon fa fa-check"></i> 成功!</h4>
                     [[successMessage]]
                 </div>
 
@@ -29,7 +29,7 @@
                 {{-- Info message if there are no prescriptions to be issued --}}
                 <div class="alert alert-info alert-dismissable" ng-if="prescriptions.length==0" ng-cloak>
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-info"></i> Sorry!</h4>
+                    <h4><i class="icon fa fa-info"></i> 抱歉!</h4>
                     No Prescription to be issued at the moment.
                 </div>
 
@@ -55,20 +55,20 @@
                     <div class="box-body">
                         <div class="alert alert-danger alert-dismissable" ng-show="prescription.hasError" ng-cloak>
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h4><i class="icon fa fa-ban"></i> Oops!</h4>
+                            <h4><i class="icon fa fa-ban"></i> 警告!</h4>
                             [[error]]
                         </div>
 
                         <table class="table table-hover table-condensed table-bordered text-center">
                             <thead>
-                            <th class="col-sm-4">Drug
+                            <th class="col-sm-4">药品
                                 <i class="fa fa-question-circle-o fa-lg" data-toggle="tooltip"
                                    data-placement="bottom" title=""
                                    data-original-title="The name of the drug to be issued.
                            (The quantity type used to measure the drug's quantity is in the brackets)"></i>
                             </th>
-                            <th class="col-sm-5">Dose</th>
-                            <th class="col-sm-3">Quantity
+                            <th class="col-sm-5">剂量</th>
+                            <th class="col-sm-3">数量
                                 <i class="fa fa-question-circle-o fa-lg" data-toggle="tooltip"
                                    data-placement="bottom" title=""
                                    data-original-title="The actual quantity of the drug issued.
@@ -103,13 +103,13 @@
                         </table>
 
                         {{--table to show pharmacy drugs--}}
-                        <h4 ng-if="prescription.prescription_pharmacy_drugs.length>0">Pharmacy Drugs</h4>
+                        <h4 ng-if="prescription.prescription_pharmacy_drugs.length>0">药店药品</h4>
                         <table class="table table-condensed table-bordered table-hover text-center"
                                ng-if="prescription.prescription_pharmacy_drugs.length>0">
                             <thead>
                             <tr class="success">
-                                <th>Drug Name</th>
-                                <th>Remarks</th>
+                                <th>药品名称</th>
+                                <th>备注</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -126,14 +126,14 @@
 
                         {{--Input to add payment information--}}
                         <div class="container-fluid col-sm-12 margin">
-                            <label class="col-sm-3 control-label text-right">Payment</label>
+                            <label class="col-sm-3 control-label text-right">金额</label>
                             <div class="col-sm-9">
                                 <input type="number" class="form-control" min="0" ng-model="prescription.payment"
                                        step="0.01">
                             </div>
                         </div>
                         <div class="container-fluid col-sm-12 margin">
-                            <label class="col-sm-3 control-label text-right">Remarks</label>
+                            <label class="col-sm-3 control-label text-right">付款备注</label>
                             <div class="col-sm-9">
                                 <textarea class="form-control" ng-model="prescription.paymentRemarks"></textarea>
                             </div>
@@ -144,7 +144,7 @@
 
                     <div class="box-footer">
                         <button class="btn btn-lg btn-success pull-right" ng-click="issuePrescription([[$index]])">
-                            Mark as Issued
+                            标记为已解决
                             <i class="fa fa-question-circle-o fa-lg" data-toggle="tooltip"
                                data-placement="bottom" title=""
                                data-original-title="Mark the prescription as 'Issued'. Once a prescription is issued,

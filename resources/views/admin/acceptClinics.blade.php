@@ -6,16 +6,16 @@
 @section('content')
     <div class="container-fluid table-responsive">
         <div class="container-fluid">
-            <a href="{{route('adminLogout')}}" class="btn btn-primary">Logout</a>
+            <a href="{{route('adminLogout')}}" class="btn btn-primary">退出登录</a>
         </div>
 
         <br>
-        <h4>Clinics To Be Accepted</h4>
+        <h4>待审核诊所</h4>
 
         @if(session()->has('success'))
             <div class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <h4><i class="icon fa fa-check"></i> Success!</h4>
+                <h4><i class="icon fa fa-check"></i> 成功!</h4>
                 {{session('success')}}
             </div>
         @endif
@@ -25,21 +25,21 @@
             <div class="alert alert-danger alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
                 </button>
-                <h4><i class="icon fa fa-ban"></i> Error!</h4>
+                <h4><i class="icon fa fa-ban"></i> 错误!</h4>
                 {{session('error')}}
             </div>
         @endif
 
         <table class="table table-hover table-condensed table-bordered text-center">
             <tr>
-                <th class="col-md-2">Name</th>
-                <th class="col-md-1">Email</th>
-                <th class="col-md-2">Address</th>
-                <th class="col-md-1">Phone</th>
-                <th class="col-md-1">Country</th>
-                <th class="col-md-1">Currency</th>
-                <th class="col-md-1">Timezone</th>
-                <th class="col-md-1">Registered At (UTC)</th>
+                <th class="col-md-2">名称</th>
+                <th class="col-md-1">邮箱</th>
+                <th class="col-md-2">地址</th>
+                <th class="col-md-1">手机</th>
+                <th class="col-md-1">国家</th>
+                <th class="col-md-1">货币</th>
+                <th class="col-md-1">时区</th>
+                <th class="col-md-1">申请时间 (UTC)</th>
                 <th class="col-md-2"></th>
             </tr>
 
@@ -56,10 +56,10 @@
                     <td>{{$clinic->created_at}}</td>
                     <td>
                         <a href="{{route('acceptClinic',['id'=>$clinic->id])}}" class="btn btn-sm btn-success">
-                            Accept
+                            通过
                         </a>
                         <a href="{{route('deleteClinic',['id'=>$clinic->id])}}" class="btn btn-sm btn-danger">
-                            Delete
+                            删除
                         </a>
                     </td>
                 </tr>
@@ -69,19 +69,19 @@
     </div>
 
     <div class="container-fluid table-responsive">
-        <h4>Accepted Clinics</h4>
+        <h4>已通过审核的诊所</h4>
 
         <table class="table table-hover table-condensed table-bordered text-center">
             <tr>
-                <th class="col-md-2">Name</th>
-                <th class="col-md-1">Email</th>
-                <th class="col-md-2">Address</th>
-                <th class="col-md-1">Phone</th>
-                <th class="col-md-1">Country</th>
-                <th class="col-md-1">Currency</th>
-                <th class="col-md-1">Timezone</th>
-                <th class="col-md-1">Registered At (UTC)</th>
-                <th class="col-md-2">Patients Added</th>
+                <th class="col-md-2">名称</th>
+                <th class="col-md-1">邮箱</th>
+                <th class="col-md-2">地址</th>
+                <th class="col-md-1">手机</th>
+                <th class="col-md-1">国家</th>
+                <th class="col-md-1">货币</th>
+                <th class="col-md-1">时区</th>
+                <th class="col-md-1">申请时间 (UTC)</th>
+                <th class="col-md-2">患者数量</th>
             </tr>
 
             <tbody>

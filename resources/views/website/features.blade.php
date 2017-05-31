@@ -1,6 +1,6 @@
 @extends("layouts.website.layout")
 
-@section("title",'cmp247.com | Features')
+@section("title",'cmp247.com | 功能')
 
 @section("content")
 

@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Add Quantity Type</h4>
+                <h4 class="modal-title">添加数量类型</h4>
             </div>
 
             <form class="form-horizontal" method="post" action="{{route('addDrugType')}}">
@@ -23,14 +23,13 @@
                     {{csrf_field()}}
 
                     <div class="alert alert-warning">
-                        These quantity types will be used when keeping track of drug stocks.
-                        Therefore, use meaningful type names which can be used to describe quantities.
+                        这些数量类型将在跟踪药物库存时使用。因此，使用可用于描述数量的有意义的类型名称。
                         <br>
-                        <strong>Ex: Pills, Tablets, Bottles, Litres, Mili Litres and etc...</strong>
+                        <strong>例如：药片，片剂，瓶，升等...</strong>
                     </div>
 
                     <div class="form-group{{ $errors->has('drugType') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Quantity Type</label>
+                        <label class="col-md-3 control-label">数量类型</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="drugType"
                                    value="{{ old('drugType') }}" required
@@ -45,8 +44,8 @@
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary pull-right">Add</button>
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary pull-right">添加</button>
                 </div><!-- /.box-footer -->
             </form>
 

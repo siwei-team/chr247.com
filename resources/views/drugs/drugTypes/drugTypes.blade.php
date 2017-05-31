@@ -2,14 +2,14 @@
 
 
 @section('page_header')
-    Quantity Types
+    数量类型
 @endsection
 
 @section('breadcrumb')
     <ol class="breadcrumb">
-        <li><a href="{{route('root')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="{{route('drugs')}}">Drugs</a></li>
-        <li class="active" href="#">Drug Types</li>
+        <li><a href="{{route('root')}}"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="{{route('drugs')}}">药品库</a></li>
+        <li class="active" href="#">药品类型</li>
     </ol>
 @endsection
 
@@ -26,7 +26,7 @@
             @can('add','App\DrugType')
                 <button class="btn btn-primary margin-left"
                         data-toggle="modal" data-target="#addDrugTypeModal">
-                    Add Quantity Type
+                    添加数量类型
                     <i class="fa fa-question-circle-o fa-lg pull-right" data-toggle="tooltip"
                        data-placement="bottom" title=""
                        data-original-title="The measurements used to measure the available quantity(stock) of a drug.
@@ -43,7 +43,7 @@
             @if(session()->has('success'))
                 <div class="alert alert-success alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-check"></i> Success!</h4>
+                    <h4><i class="icon fa fa-check"></i> 成功!</h4>
                     {{session('success')}}
                 </div>
             @endif
@@ -52,7 +52,7 @@
             @if(session()->has('error'))
                 <div class="alert alert-danger alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-ban"></i> Success!</h4>
+                    <h4><i class="icon fa fa-ban"></i> 失败!</h4>
                     {{session('error')}}
                 </div>
             @endif
@@ -70,8 +70,8 @@
             <table class="table table-responsive table-condensed table-hover text-center" id="drugsTable">
                 <thead>
                 <tr>
-                    <th>Quantity Type</th>
-                    <th>Created By</th>
+                    <th>数量类型</th>
+                    <th>创建者</th>
                     <th></th>
                 </tr>
                 </thead>

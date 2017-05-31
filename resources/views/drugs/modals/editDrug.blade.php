@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Edit Drug</h4>
+                <h4 class="modal-title">编辑药品</h4>
             </div>
 
             <form class="form-horizontal" method="post" action="{{route('editDrug',['id'=>$drug->id])}}">
@@ -34,7 +34,7 @@
                     {{csrf_field()}}
 
                     <div class="form-group{{ $errors->has('drugName') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Drug Name</label>
+                        <label class="col-md-3 control-label">药品名称</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="drugName"
                                    value="{{ old('drugName')?:$drug->name }}" required>
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('ingredient') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Ingredient</label>
+                        <label class="col-md-3 control-label">成分</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="ingredient"
                                    value="{{ old('ingredient')?:$drug->ingredient }}" required>
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('quantityType') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Quantity Type</label>
+                        <label class="col-md-3 control-label">数量类型</label>
                         <div class="col-md-9">
                             <select name="quantityType" class="form-control">
                                 @foreach($drug->clinic->quantityTypes as $quantityType)
@@ -79,7 +79,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('manufacturer') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Manufacturer</label>
+                        <label class="col-md-3 control-label">厂商</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="manufacturer"
                                    value="{{ old('manufacturer')?: $drug->manufacturer }}" required>
@@ -94,8 +94,8 @@
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary pull-right">Update</button>
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary pull-right">更新</button>
                 </div><!-- /.box-footer -->
             </form>
 

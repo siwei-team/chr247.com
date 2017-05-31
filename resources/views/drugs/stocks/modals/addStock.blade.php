@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Add Stock</h4>
+                <h4 class="modal-title">添加库存</h4>
             </div>
 
             <form class="form-horizontal" method="post" action="{{route('addStock',['drugId'=>$drug->id])}}">
@@ -23,7 +23,7 @@
                     {{csrf_field()}}
 
                     <div class="form-group{{ $errors->has('quantity') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Quantity (in {{$drug->getQuantityType()}})</label>
+                        <label class="col-md-3 control-label">数量 (在 {{$drug->getQuantityType()}})</label>
                         <div class="col-md-9">
                             <input type="number" min="0" step="0.01" class="form-control" name="quantity"
                                    value="{{ old('quantity') }}">
@@ -36,7 +36,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('manufacturedDate') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Manufactured Date</label>
+                        <label class="col-md-3 control-label">生产日期</label>
                         <div class="col-md-9">
                             <input type="date" class="form-control" name="manufacturedDate"
                                    value="{{ old('manufacturedDate') }}">
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('receivedDate') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Purchased Date</label>
+                        <label class="col-md-3 control-label">购买日期</label>
                         <div class="col-md-9">
                             <input type="date" class="form-control" name="receivedDate"
                                    value="{{ old('receivedDate') }}">
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('expiryDate') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Expiry Date</label>
+                        <label class="col-md-3 control-label">有效期</label>
                         <div class="col-md-9">
                             <input type="date" class="form-control" name="expiryDate"
                                    value="{{ old('expiryDate') }}">
@@ -75,7 +75,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('remarks') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">Remarks</label>
+                        <label class="col-md-3 control-label">备注</label>
                         <div class="col-md-9">
                             <textarea class="form-control" name="remarks" rows="2">{{old('remarks')}}</textarea>
                             @if ($errors->has('remarks'))
@@ -88,8 +88,8 @@
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary pull-right">Add</button>
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary pull-right">添加</button>
                 </div><!-- /.box-footer -->
             </form>
 

@@ -39,7 +39,7 @@ class FeedbackController extends Controller {
         $emails = explode(",", $emails);
 
         Mail::send('emails.feedback', ['feedback' => $request->feedback, 'user' => $user], function ($m) use ($emails) {
-            $m->to($emails)->subject('CHR247.COM - User Feedback');
+            $m->to($emails)->subject('cmp247.COM - User Feedback');
         });
 
         Log::debug(self::LOG_CLASS_NAME . "Feedback sent by user - $user->id");
